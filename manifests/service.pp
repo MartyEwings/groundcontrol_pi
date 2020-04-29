@@ -5,4 +5,12 @@
 # @example
 #   include groundcontrol::service
 class groundcontrol::service {
+
+service { 'groundcontrol-start':
+    ensure => running,
+    name   => 'groundcontrol',
+    enable => true,
+  }
+
+
 }

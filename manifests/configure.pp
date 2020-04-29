@@ -4,5 +4,18 @@
 #
 # @example
 #   include groundcontrol::configure
-class groundcontrol::configure {
+class groundcontrol::configure inherits groundcontrol::params {
+
+file { '/etc/groundcontrol.json':
+  ensure  => file,
+  content => template('groundcontrol/groundcontrol.json.erb'),
+}
+
+
+file { '/etc/init.d/groundcontrol':
+  ensure  => file,
+  content => template('groundcontrol/groundcontrol.erb'),
+}
+
+
 }
