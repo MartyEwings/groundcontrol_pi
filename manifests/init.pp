@@ -9,7 +9,7 @@ class groundcontrol  {
 
   anchor { 'groundcontrol::begin': }
   -> class { 'groundcontrol::install': }
-  -> class { 'groundcontrol::config':
+  -> class { 'groundcontrol::configure':
     notify => Class['groundcontrol::service'],
   }
   -> class { 'groundcontrol::service': }
