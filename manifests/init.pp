@@ -4,23 +4,17 @@
 #
 # @example
    include groundcontrol
-class groundcontrol {
+class groundcontrol inherits groundcontrol::params {
 
-$install_path        = '/opt/groundcontrol/'
-$package_name        = 'groundcontrol'
-$package_ensure      = '0.0.3'
-$repository_url      = "https://github.com/jondot/groundcontrol/releases/download/$package_ensure/"
-$archive_name        = "${package_name}-${package_ensure}.tar.gz"
-$gc_package_source = "${repository_url}/${archive_name}"
 
-archive { $archive_name:
-  path         => "/tmp/${archive_name}",
-  source       => $gc_package_source,
-  extract      => true,
-  extract_path => $install_path,
-  creates      => "${install_path}/${package_name}-${package_ensure}",
-  cleanup      => true,
-}
+  anchor { 'groundcontrol::begin': } ->
+	class { 'groundcontrol::install': } ->
+	class { 'groundcontrol::config':
+		notify => Class['groundcontrol::service'],
+	} ->
+	class { 'groundcontrol::service': } ->
+	anchor { 'groundcontrol::end': }
+
 
 
 }
