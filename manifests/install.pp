@@ -4,15 +4,8 @@
 #
 # @example
 #include  groundcontrol::install
-class groundcontrol::install (
-
-   String $archive_name,
-   String $gc_package_source,
-   String $install_path,
-   String $package_name,
-   String $package_ensure,
-
-) {
+class groundcontrol::install
+{
 
 
   archive { $archive_name:
@@ -20,7 +13,7 @@ class groundcontrol::install (
   source       => $gc_package_source,
   extract      => true,
   extract_path => $install_path,
-  creates      => "${install_path}/${package_name}",
+  creates      => "${install_path}/${package_name}-${package_ensure}",
   cleanup      => true,
           }
 }

@@ -4,15 +4,8 @@
 #
 # @example
 #   include groundcontrol::configure
-class groundcontrol::configure (
-
-   Integer $gc_port,
-   String  $gc_host,
-   Boolean $gc_stdout,
-   Integer $gc_interval,
-
-
-) {
+class groundcontrol::configure 
+ {
 
   file { '/etc/groundcontrol.json':
   ensure  => file,
