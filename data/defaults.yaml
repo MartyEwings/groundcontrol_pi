@@ -6,7 +6,7 @@ groundcontrol::install::repository_url: 'https://github.com/jondot/groundcontrol
 groundcontrol::install::archive_name: 'groundcontrol-0.0.3.tar.gz'
 groundcontrol::install::gc_package_source: 'https://github.com/jondot/groundcontrol/releases/download/0.0.3/groundcontrol-0.0.3.tar.gz'
 
-groundcontrol::configure::gc_port: '4571'
+groundcontrol::configure::gc_port: 4571
 groundcontrol::configure::gc_host: '0.0.0.0'
-groundcontrol::configure::gc_stdout: 'false'
-groundcontrol::configure::gc_interval: '30'
+groundcontrol::configure::gc_stdout: false
+groundcontrol::configure::gc_interval: 30
