@@ -4,9 +4,16 @@
 #
 # @example
 #include  groundcontrol::install
-class groundcontrol::install  {
+class groundcontrol::install (
 
-require groundcontrol::params
+   String $archive_name,
+   String $gc_package_source,
+   String $install_path,
+   String $package_name,
+   String $package_ensure,
+
+) {
+
 
   archive { $::archive_name:
   path         => "/tmp/${::archive_name}",

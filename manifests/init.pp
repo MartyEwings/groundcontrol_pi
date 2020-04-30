@@ -6,7 +6,6 @@
 # include groundcontrol
 class groundcontrol  {
 
-require groundcontrol::params
 
 contain groundcontrol::install
 contain groundcontrol::configure

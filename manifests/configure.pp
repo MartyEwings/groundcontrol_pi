@@ -4,11 +4,17 @@
 #
 # @example
 #   include groundcontrol::configure
-class groundcontrol::configure {
+class groundcontrol::configure (
 
-require groundcontrol::params
+   Integer $gc_port,
+   String  $gc_host,
+   Boolean $gc_stdout,
+   Integer gc_interval,
 
-file { '/etc/groundcontrol.json':
+
+) {
+
+  file { '/etc/groundcontrol.json':
   ensure  => file,
   content => template('groundcontrol/groundcontrol.json.erb'),
 }
