@@ -4,7 +4,9 @@
 #
 # @example
 #   include groundcontrol::configure
-class groundcontrol::configure inherits groundcontrol::params {
+class groundcontrol::configure {
+
+require groundcontrol::params
 
 file { '/etc/groundcontrol.json':
   ensure  => file,

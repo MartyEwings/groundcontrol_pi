@@ -6,15 +6,13 @@
 # include groundcontrol
 class groundcontrol  {
 
+require groundcontrol::params
 
-  anchor { 'groundcontrol::begin': }
-  -> class { 'groundcontrol::install': }
-  -> class { 'groundcontrol::configure':
-    notify => Class['groundcontrol::service'],
-  }
-  -> class { 'groundcontrol::service': }
-  -> anchor { 'groundcontrol::end': }
+contain groundcontrol::install
+contain groundcontrol::configure
+conrain groundcontrol:service
 
+Class['groundcontrol::install'] -> Class['groundcontrol::configure'] ~> Class['groundcontrol::service']
 
 
 }

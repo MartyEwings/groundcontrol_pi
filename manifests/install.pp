@@ -4,7 +4,9 @@
 #
 # @example
 #include  groundcontrol::install
-class groundcontrol::install inherits groundcontrol::params {
+class groundcontrol::install  {
+
+require groundcontrol::params
 
   archive { $::archive_name:
   path         => "/tmp/${::archive_name}",
