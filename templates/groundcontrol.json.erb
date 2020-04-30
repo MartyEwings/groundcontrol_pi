@@ -3,13 +3,13 @@
 
   "temperature" : "/sys/class/thermal/thermal_zone0/temp",
 
-  "port": <%= scope['groundcontrol::gc_path'] %>,
+  "port": <%= scope['groundcontrol::gc_port'] %>,
 
-  "host": "<%= scope['groundcontrol::gc_port'] %>",
+  "host": "<%= scope['groundcontrol::gc_host'] %>",
 
   "stdout" : <%= scope['groundcontrol::gc_stdout'] %>,
 
-  "interval" : <%= scope['groundcontrol::interval'] %>,
+  "interval" : <%= scope['groundcontrol::gc_interval'] %>,
 
   "history_interval": 60,
   "history_backlog": 20
