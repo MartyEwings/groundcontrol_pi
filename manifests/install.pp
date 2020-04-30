@@ -15,12 +15,12 @@ class groundcontrol::install (
 ) {
 
 
-  archive { $::archive_name:
-  path         => "/tmp/${::archive_name}",
-  source       => $::gc_package_source,
+  archive { $archive_name:
+  path         => "/tmp/${archive_name}",
+  source       => $gc_package_source,
   extract      => true,
-  extract_path => $::install_path,
-  creates      => "${::install_path}/${::package_name}-${::package_ensure}",
+  extract_path => $install_path,
+  creates      => "${install_path}/${package_name}-${package_ensure}",
   cleanup      => true,
           }
 }
