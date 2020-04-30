@@ -9,7 +9,7 @@ class groundcontrol::install
 
 
   archive { $groundcontrol::archive_name:
-  path         => "/tmp/${::archive_name}",
+  path         => "/tmp/${groundcontrol::archive_name}",
   source       => $groundcontrol::gc_package_source,
   extract      => true,
   extract_path => $groundcontrol::install_path,
