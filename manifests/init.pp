@@ -6,15 +6,15 @@
 # include groundcontrol
 class groundcontrol (
 
-   String $archive_name,
-   String $gc_package_source,
-   String $install_path,
-   String $package_name,
-   String $package_ensure,
-   Integer $gc_port,
-   String  $gc_host,
-   Boolean $gc_stdout,
-   Integer $gc_interval,
+  String $archive_name,
+  String $gc_package_source,
+  String $install_path,
+  String $package_name,
+  String $package_ensure,
+  Integer $gc_port,
+  String  $gc_host,
+  Boolean $gc_stdout,
+  Integer $gc_interval,
 ) {
 
 

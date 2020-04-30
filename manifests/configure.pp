@@ -4,8 +4,8 @@
 #
 # @example
 #   include groundcontrol::configure
-class groundcontrol::configure 
- {
+class groundcontrol::configure
+{
 
   file { '/etc/groundcontrol.json':
   ensure  => file,
