@@ -9,7 +9,7 @@ class groundcontrol::configure (
    Integer $gc_port,
    String  $gc_host,
    Boolean $gc_stdout,
-   Integer gc_interval,
+   Integer $gc_interval,
 
 
 ) {
