@@ -1,5 +1,5 @@
 ---
-groundcontrol::install::install_path:  '/opt/groundcontrol/'
+groundcontrol::install::install_path:  '/opt/'
 groundcontrol::install::package_name: 'groundcontrol'
 groundcontrol::install::package_ensure: '0.0.3'
 groundcontrol::install::repository_url: 'https://github.com/jondot/groundcontrol/releases/download/0.0.3/'

@@ -20,7 +20,7 @@ class groundcontrol::install (
   source       => $gc_package_source,
   extract      => true,
   extract_path => $install_path,
-  creates      => "${install_path}/${package_name}-${package_ensure}",
+  creates      => "${install_path}/${package_name}",
   cleanup      => true,
           }
 }
