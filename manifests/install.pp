@@ -8,12 +8,12 @@ class groundcontrol::install
 {
 
 
-  archive { $::archive_name:
+  archive { $groundcontrol::archive_name:
   path         => "/tmp/${::archive_name}",
-  source       => $::gc_package_source,
+  source       => $groundcontrol::gc_package_source,
   extract      => true,
-  extract_path => $::install_path,
-  creates      => "${::install_path}/${::package_name}-${::package_ensure}",
+  extract_path => $groundcontrol::install_path,
+  creates      => "${groundcontrol::install_path}/${groundcontrol::package_name}-${groundcontrol::package_ensure}",
   cleanup      => true,
           }
 }
