@@ -15,7 +15,7 @@
 . /lib/lsb/init-functions
  
 name="groundcontrol"
-gc_home= "<%= @groundcontrol::install_path %>"
+gc_home= "<%= scope['groundcontrol::install_path'] %>"
 gc_bin="$gc_home/groundcontrol"
 gc_conf="/etc/groundcontrol.json"
 pid_file="/var/run/$name.pid"
