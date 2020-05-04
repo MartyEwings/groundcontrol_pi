@@ -2,9 +2,11 @@
   "name": "martinewings-groundcontrol",
   "version": "0.1.0",
   "author": "Marty Ewings",
-  "summary": "",
+  "summary": "Installs and configures groundcontrol a PI monitorring Tool",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/MartyEwings/groundcontrol_pi.git",
+  "project_page": "https://github.com/MartyEwings/groundcontrol_pi.git",
+  "issues_url": "https://github.com/MartyEwings/groundcontrol_pi/issues",
   "dependencies": [
 
   ],
